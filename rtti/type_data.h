@@ -14,9 +14,9 @@
 namespace Dimitory
 {
     class TypeDatabase;
-    using Constructors = std::unordered_map<Signature, std::unique_ptr<Invokable>>;
+    using Constructors = std::unordered_map<Signature, std::shared_ptr<Invokable>>;
     using Fields = std::unordered_map<String, Field>;
-    using Methods = std::unordered_map<String, std::unordered_multimap<Signature, Method> >;
+    using Methods = std::unordered_map<String, std::unordered_multimap<Signature, Method>>;
 
     struct TypeData
     {
